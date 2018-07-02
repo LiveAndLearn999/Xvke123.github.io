@@ -9,9 +9,9 @@
 	<style>
 		.tech-content{width: 100%;height: 400px;margin-top: 60px;}
 		.tech-contentl{width: 200px;height: 800px;float: left;background-color: #666;}
-		.tech-contentl p{width: 100%;height: auto;color: white;padding-left: 20px;background-color: #666;height: 50px;line-height: 50px;box-sizing: border-box;margin: 0px;}
+		.tech-contentl p{width: 100%;height: auto;color: white;padding-left: 20px;background-color: #666;height: 50px;line-height: 50px;box-sizing: border-box;margin: 0px;cursor: pointer;}
 		.tech-contentl ul{display: inline-block;width: 200px;height: auto;padding: 0px;font-size: 0px;padding-left: 20px;box-sizing: border-box;background-color: transparent;}
-		.tech-contentl ul li{list-style: none;width: 100%;height: 40px;background-color: white;font-size: 16px;line-height: 40px;}
+		.tech-contentl ul li{list-style: none;width: 100%;height: 40px;background-color: white;font-size: 16px;line-height: 40px;cursor: pointer;}
 		.tech-contentr{height: 800px;background-color: white;margin-left: 200px;}
 	</style>
 
@@ -23,24 +23,26 @@
 		    var p = $('.tech-contentl p');
 			for(var i = 0;i<ul.length;i++){
 				$(ul[i]).hide();
-				console.log($(ul[i]).eq(0).attr("id"));
 			};
 			for(var j =0;j<p.length;j++){
-        	$(p[j]).click(function(){
-        		console.log(this.id);
-        		var showid = this.id+'s';
-        		for(var k = 0;k<ul.length;k++){
-        			console.log($(ul[k]).id)
-        			var hideid = $(ul[k]).eq(0).attr("id");
-        			if(hideid == showid){
-        				$(ul[k]).show();
-        				$(ul[k]).addClass('animte animated bounceIn')
-        			}else{
-        				$(ul[k]).hide();
-        			}
-        		}
-        	})
-        }
+	        	$(p[j]).click(function(){
+	        		var showid = this.id+'s';
+	        		for(var k = 0;k<ul.length;k++){
+	        			var hideid = $(ul[k]).eq(0).attr("id");
+	        			if(hideid == showid){
+	        				$(ul[k]).show();
+	        				$(ul[k]).addClass('animte animated bounceIn')
+	        			}else{
+	        				$(ul[k]).hide();
+	        			}
+	        		}
+	        	})
+	        };
+
+	        $('#html-1').click(function(){
+	        	console.log(11111);
+	        	$('.tech-contentr').load('../component/htmlCompont.html')
+	        })
 
 		});
         
@@ -70,7 +72,7 @@
 			<div>
 				<p id="tech-list1">html</p>
 				<ul id="tech-list1s">
-					<li>基础</li>
+					<li id="html-1">基础</li>
 					<li>笔记</li>
 				</ul>
 			</div>

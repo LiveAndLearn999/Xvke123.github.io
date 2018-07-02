@@ -11,6 +11,8 @@ body {margin: 0;overflow: hidden;width: 100vw;height: 100vh;background: #222;dis
 .cube .cube__back {color: seagreen;position: absolute;top: 0;left: 0;width: 100%;height: 100%;-webkit-transform: rotateY(180deg) translateZ(25vh);transform: rotateY(180deg) translateZ(25vh);}
 .cube .cube__top {color: mediumseagreen;-webkit-transform: rotateX(90deg) translateZ(25vh);transform: rotateX(90deg) translateZ(25vh);position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
 .cube .cube__bottom {color: dodgerblue;-webkit-transform: rotateX(270deg) translateZ(25vh);transform: rotateX(270deg) translateZ(25vh);position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.cube a{text-decoration: none;color: white;font-size: 30px;text-align: center;display: inline-block;width: 50vh;height: 50vh;line-height: 50vh}
+
 
 .bd{width: 100%;height:auto;position: fixed;z-index: 999;top: 0px;}
 .header{width: 100%;height: 60px; }
