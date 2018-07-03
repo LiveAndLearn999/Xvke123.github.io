@@ -19,6 +19,7 @@
 	<script src="../js/jquery.js"></script>
 	<script>
 		$(function(){
+			$('.tech-contentr').load('technology-home.html')
 			var ul = $('.tech-contentl ul');
 		    var p = $('.tech-contentl p');
 			for(var i = 0;i<ul.length;i++){
@@ -40,9 +41,8 @@
 	        };
 
 	        $('#html-1').click(function(){
-	        	console.log(11111);
-	        	$('.tech-contentr').load('../component/htmlCompont.html')
-	        })
+	        	$('.tech-contentr').load('../component/htmlCompont.html');
+	        });
 
 		});
         
